@@ -32,7 +32,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ toLower(github.repository_owner) }}/docker-cleanup:latest
-          # Ensure lowercase for repository owner
-          labels: |
-            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+          tags: ghcr.io/SvenLameir/docker-cleanup:latest
