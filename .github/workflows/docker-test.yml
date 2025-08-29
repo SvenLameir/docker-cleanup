@@ -22,15 +22,16 @@ jobs:
         run: |
           docker build -t cleanup-test .
 
-      - name: Run container with default interval (24h)
+      - name: Run container without variables
         run: |
           docker run --rm \
             -v /var/run/docker.sock:/var/run/docker.sock \
             cleanup-test
 
-      - name: Run container with custom interval (12h)
+      - name: Run container with variables
         run: |
           docker run --rm \
-            -e CLEANUP_INTERVAL=12h \
+            -e RUN_INTERVAL=1h \
+            -e IMAGE_AGE=24h \
             -v /var/run/docker.sock:/var/run/docker.sock \
             cleanup-test
