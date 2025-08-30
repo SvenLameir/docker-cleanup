@@ -13,4 +13,4 @@ ENV PYTHONPATH=/src
 LABEL org.opencontainers.image.version=$VERSION
 
 COPY src /src
-ENTRYPOINT ["python", "-m", "src.cleanup"]
+ENTRYPOINT ["python", "-m", "src.main"]
