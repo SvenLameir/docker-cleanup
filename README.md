@@ -1,6 +1,6 @@
-# Docker Cleanup
+# Docker Cleanup Container
 
-This project provides a Docker container that removes old Docker images from the host system. The cleanup interval and image age are configurable via environment variables.
+This project provides a Docker container and script that removes old Docker images from the host system. The cleanup interval and image age are configurable via environment variables.
 
 ## Features
 - Removes all unused Docker images older than a specified age (`IMAGE_AGE`, default: 24h)
@@ -35,7 +35,16 @@ You can also run the script directly on your host (requires Python 3 and Docker 
 ```sh
 export IMAGE_AGE=24h
 export RUN_INTERVAL=1d
-python cleanup.py
+python -m src.cleanup
+```
+
+### Project Structure
+
+```
+src/
+  cleanup.py         # Main entry point
+  docker_cleanup.py  # Docker image prune logic
+  utils.py           # Utility functions
 ```
 
 #### Supported RUN_INTERVAL Formats
@@ -50,4 +59,4 @@ python cleanup.py
 The script uses Python's built-in logging module. All actions, including Docker command output, are logged to the console with timestamps and log levels.
 
 ## License
-Apache License 2.0
+MIT
