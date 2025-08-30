@@ -28,7 +28,7 @@ docker run --rm \
 
 ```
 src/
-  cleanup.py         # Main entry point
+  main.py            # Main entry point
   docker_cleanup.py  # Docker image prune logic
   utils.py           # Utility functions
 ```
