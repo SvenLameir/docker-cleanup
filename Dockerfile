@@ -6,5 +6,5 @@ RUN apk add --no-cache docker-cli
 # Optionally set the cleanup interval (default is 24h)
 ENV CLEANUP_INTERVAL=24h
 
-COPY cleanup.py /cleanup.py
+COPY src/cleanup.py /cleanup.py
 ENTRYPOINT ["python", "-m", "src.cleanup"]
