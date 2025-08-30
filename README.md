@@ -5,6 +5,7 @@ This project provides a Docker container and script that removes old Docker imag
 ## Features
 - Removes all unused Docker images older than a specified age (`IMAGE_AGE`, default: 24h)
 - Configurable cleanup interval via the `RUN_INTERVAL` environment variable (supports units: s, m, h, d; default: 3600 seconds)
+- Timezone can be set via the `TZ` environment variable (default: UTC)
 - Logs all actions and Docker output to the console
 - Can be run manually or scheduled
 
