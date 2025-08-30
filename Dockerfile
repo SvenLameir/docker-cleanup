@@ -1,3 +1,4 @@
+
 FROM python:3.11-alpine
 ARG VERSION
 
@@ -10,5 +11,5 @@ ENV CLEANUP_INTERVAL=24h
 # Add version label
 LABEL org.opencontainers.image.version=$VERSION
 
-COPY src/cleanup.py /cleanup.py
+COPY src /src
 ENTRYPOINT ["python", "-m", "src.cleanup"]
