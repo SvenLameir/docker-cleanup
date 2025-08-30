@@ -24,16 +24,6 @@ docker run --rm \
 - The `RUN_INTERVAL` variable sets the interval between cleanup runs. You can use seconds (e.g., `3600`), minutes (`30m`), hours (`2h`), or days (`1d`).
 - The Docker socket must be mounted for the container to manage images on the host.
 
-### Example: Run Manually
-
-You can also run the script directly on your host (requires Python 3 and Docker CLI):
-
-```sh
-export IMAGE_AGE=24h
-export RUN_INTERVAL=1d
-python -m src.cleanup
-```
-
 ### Project Structure
 
 ```
