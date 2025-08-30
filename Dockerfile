@@ -7,4 +7,4 @@ RUN apk add --no-cache docker-cli
 ENV CLEANUP_INTERVAL=24h
 
 COPY cleanup.py /cleanup.py
-ENTRYPOINT ["python", "/cleanup.py"]
+ENTRYPOINT ["python", "-m", "src.cleanup"]
