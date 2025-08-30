@@ -10,11 +10,6 @@ This project provides a Docker container and script that removes old Docker imag
 
 ## Usage
 
-### Build the Docker Image
-```sh
-docker build -t cleanup:latest .
-```
-
 ### Run the Container
 ```sh
 docker run --rm \
