@@ -1,3 +1,18 @@
+import time
+
+def set_timezone_from_env(default: str = "UTC") -> None:
+    """
+    Set the system timezone from the TZ environment variable, if available.
+    Args:
+        default (str): The default timezone if TZ is not set.
+    """
+    tz = os.environ.get("TZ", default)
+    try:
+        os.environ["TZ"] = tz
+        time.tzset()
+    except (AttributeError, Exception):
+        # time.tzset() is not available on all platforms (e.g., Windows)
+        pass
 import os
 import re
 
