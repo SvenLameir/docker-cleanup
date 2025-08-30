@@ -16,6 +16,7 @@ This project provides a Docker container and script that removes old Docker imag
 docker run --rm \
   -e IMAGE_AGE=48h \
   -e RUN_INTERVAL=2h \
+  -e TZ=Europe/Amsterdam \
   -v /var/run/docker.sock:/var/run/docker.sock \
   cleanup:latest
 ```
