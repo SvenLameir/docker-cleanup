@@ -1,6 +1,5 @@
-# Read version from VERSION file
-ARG VERSION
 FROM python:3.11-alpine
+ARG VERSION
 
 # Install Docker CLI
 RUN apk add --no-cache docker-cli
