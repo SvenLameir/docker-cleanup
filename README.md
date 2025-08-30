@@ -50,4 +50,4 @@ python cleanup.py
 The script uses Python's built-in logging module. All actions, including Docker command output, are logged to the console with timestamps and log levels.
 
 ## License
-MIT
+Apache License 2.0
