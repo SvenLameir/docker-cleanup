@@ -1,5 +1,5 @@
 from docker_cleanup import prune_images
-from utils import get_env_variable, parse_interval
+from utils import get_env_variable, parse_interval, set_timezone_from_env
 import logging
 import time
 
@@ -7,6 +7,8 @@ def main() -> None:
     """
     Main loop to periodically prune Docker images.
     """
+    # Set timezone from environment variable
+    set_timezone_from_env()
     # Configure logging format and level
     logging.basicConfig(
         level=logging.INFO,
