@@ -44,4 +44,4 @@ src/
 The container uses Python's built-in logging module. All actions, including Docker command output, are logged to the console with timestamps and log levels.
 
 ## License
-MIT
+GNU GPLv3
