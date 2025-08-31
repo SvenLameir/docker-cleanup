@@ -3,7 +3,7 @@
 This project provides a Docker container that removes old Docker images from the host system to free up space. The cleanup interval and image age are configurable via environment variables.
 
 [![Dependabot Updates](https://github.com/svenlameir/deckhand/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/svenlameir/deckhand/actions/workflows/dependabot/dependabot-updates)
-[![Docker](https://github.com/svenlameir/deckhand/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/svenlameir/deckhand/actions/workflows/docker-publish.yml)
+[![docker-publish](https://github.com/svenlameir/deckhand/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/svenlameir/deckhand/actions/workflows/docker-publish.yml)
 ## Features
 - Removes all unused Docker images older than a specified age
 - Configurable cleanup interval
